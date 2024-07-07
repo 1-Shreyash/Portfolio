@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { easeInOut, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Reveal = ({ children, index }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
   const mainControls = useAnimation();
@@ -26,7 +26,7 @@ const Reveal = ({ children, index }) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        transition={{ duration: 0.5, delay: index * 0.1, type: easeInOut }}
       >
         {children}
       </motion.div>

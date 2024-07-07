@@ -14,9 +14,11 @@
     "next": "14.2.4",
     "nodemailer": "^6.9.14",
     "react": "^18",
+    "react-awesome-reveal": "^4.2.12",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.10.3",
+    "react-reveal": "^1.2.2",
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {

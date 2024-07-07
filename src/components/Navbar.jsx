@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         <a
           onClick={() => handleScroll("home")}
-          className="text-white text-lg font-bold"
+          className="text-white text-lg font-bold cursor-pointer"
         >
           Shreyash S. Sahu
         </a>
