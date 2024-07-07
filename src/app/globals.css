@@ -23,21 +23,21 @@ body{
 }
 
 .btn::before{
-  content: "";
+  content: '';
   position: absolute;
-  top: var(--x);
-  left: var(--y);
+  top: var(--y);
+  left: var(--x);
   transform: translate(-50%, -50%);
   width: 0px;
   height: 0px;
   border-radius: 50%;
   background-color: #2196f3;
-  transition: 0.5s;
+  transition: width 0.5s, height 0.5s;
 }
 
 .btn:hover::before{
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');

@@ -8,6 +8,9 @@ const Button = () => {
 
   const handleMouseMove = (e) => {
     const btn = btnRef.current;
+    // console.log(btnRef);
+    console.log("X", e.pageX - btn.offsetLeft);
+    console.log("Y", e.pageY - btn.offsetTop);
     const x = e.pageX - btn.offsetLeft;
     const y = e.pageY - btn.offsetTop;
     btn.style.setProperty("--x", x + "px");
