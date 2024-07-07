@@ -57,7 +57,7 @@ const projects = [
     tech: "HTML, CSS, JS",
     desc: "A stopwatch with play-pause and record time lapse feature",
     git: "https://github.com/1-Shreyash/Stop-Watch",
-    deploy: "1-shreyash.github.io/Stop-Watch/",
+    deploy: "https://1-shreyash.github.io/Stop-Watch/",
   },
   {
     name: "Tic Tac Toe",
@@ -65,7 +65,7 @@ const projects = [
     tech: "HTML, CSS, JS",
     desc: "Classic Tic-Tac-Toe Game",
     git: "https://github.com/1-Shreyash/TIC-TAC-TOE",
-    deploy: "1-shreyash.github.io/TIC-TAC-TOE/",
+    deploy: "https://1-shreyash.github.io/TIC-TAC-TOE/",
   },
   {
     name: "Todo Tracker",
@@ -73,7 +73,7 @@ const projects = [
     tech: "HTML, CSS, JS",
     desc: "TODO List",
     git: "https://github.com/1-Shreyash/TO-DO-LIST",
-    deploy: "1-shreyash.github.io/TO-DO-LIST/",
+    deploy: "https://1-shreyash.github.io/TO-DO-LIST/",
   },
   {
     name: "Digital Clock",
@@ -81,7 +81,7 @@ const projects = [
     tech: "HTML, CSS, JS",
     desc: "Color Changes according to the time of the day.",
     git: "https://github.com/1-Shreyash/Color-Changing-Clock",
-    deploy: "1-shreyash.github.io/Color-Changing-Clock/",
+    deploy: "https://1-shreyash.github.io/Color-Changing-Clock/",
   },
 ];
 
