@@ -10,11 +10,18 @@ body{
   position: relative;
   display: inline-flex;
   padding: 10px 30px;
-  background-color: #16b4d8;
+  background-color: #c8c8c8;
   color : #fff;
+  border: 1px solid #000000;
+  border-radius: 999px;
   text-decoration: none;
   letter-spacing: 1px;
   overflow: hidden;
+}
+
+.btn:hover span{
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
 }
 
 .btn span{
@@ -31,7 +38,7 @@ body{
   width: 0px;
   height: 0px;
   border-radius: 50%;
-  background-color: #2196f3;
+  background-color: #000000;
   transition: width 0.5s, height 0.5s;
 }
 
