@@ -21,12 +21,12 @@ body{
 
 .btn:hover span{
   transform: scale(1.1);
-  transition: 0.4s ease-in-out;
 }
 
 .btn span{
   position: relative;
   z-index: 1;
+  transition: 0.3s ease-in-out;
 }
 
 .btn::before{
