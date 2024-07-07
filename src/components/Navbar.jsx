@@ -20,9 +20,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-blue-500 p-4 fixed top-0 z-50">
+    <nav className="w-full bg-black p-4 fixed top-0 z-50">
       <div className="flex justify-between items-center">
-        <div className="text-white text-lg font-bold">Shreyash S. Sahu</div>
+        <a
+          onClick={() => handleScroll("home")}
+          className="text-white text-lg font-bold"
+        >
+          Shreyash S. Sahu
+        </a>
         <div className="lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <IoClose size={30} className="text-white" />
