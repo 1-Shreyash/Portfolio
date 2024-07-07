@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-blue-500 p-4 fixed top-0 z-50">
       <div className="flex justify-between items-center">
-        <div className="text-white text-lg font-bold">My Portfolio</div>
+        <div className="text-white text-lg font-bold">Shreyash S. Sahu</div>
         <div className="lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <IoClose size={30} className="text-white" />
