@@ -7,7 +7,7 @@ import ProjectPage from "../components/Project/ProjectPage";
 import SkillsPage from "@/components/Skill/SkillsPage";
 import ContactForm from "@/components/Contact/ContactForm";
 import Footer from "@/components/Footer";
-import Fade, { Zoom } from "react-awesome-reveal";
+import { Fade, Bounce, Zoom } from "react-awesome-reveal";
 
 export default function Home() {
   return (
@@ -17,8 +17,10 @@ export default function Home() {
         id="home"
         className="bg-gray-100 flex flex-col items-center justify-center"
       >
-        <h1 className="md:text-xl mt-80">Hola My name is,</h1>
-        <Zoom triggerOnce={false}>
+        <Bounce duration={500}>
+          <h1 className="md:text-xl mt-80">Hola My name is,</h1>
+        </Bounce>
+        <Zoom delay={300}>
           {/* <Fade bottom> */}
           <h1 className="text-outliner text-[35px] sm:text-[50px] md:text-[100px]">
             &lt; Shreyash S. Sahu /&gt;
@@ -28,7 +30,9 @@ export default function Home() {
         <div className="md:text-2xl m-8">
           Full Stack Developer And Competetive Programmer
         </div>
+        {/* <Zoom triggerOnce> */}
         <Button />
+        {/* </Zoom> */}
         <div className="w-[80%] m-40 md:text-2xl text-center">
           A highly skilled software developer with extensive experience in
           building reliable and innovative digital solutions. Demonstrates

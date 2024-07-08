@@ -10,6 +10,7 @@ import TicTacToe from "../../images/Tic-Tac-Toe.png";
 import TodoTracker from "../../images/TodoTracker.png";
 import DigitalClock from "../../images/DigitalClock.png";
 import Reveal from "../Reveal";
+import Button from "../ProjectBtn";
 const projects = [
   {
     name: "Healthify",
@@ -41,7 +42,7 @@ const projects = [
     tech: "HTML, CSS, JS",
     desc: "Clone of Flipkart",
     git: "https://github.com/1-Shreyash/Flipkart-Clone-Project",
-    deploy: "1-shreyash.github.io/Flipkart-Clone-Project/",
+    deploy: "https://1-shreyash.github.io/Flipkart-Clone-Project/",
   },
   {
     name: "Manzar Site",
@@ -102,11 +103,12 @@ const makeProjectCards = (item, index) => {
 
 const ProjectPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-40">
+    <div className="flex flex-col justify-center items-center py-20">
       <h1 className="text-4xl m-12">Projects</h1>
       <div className="h-fit grid sm:grid-cols-2 md:grid-cols-3">
         {projects.map((skill, index) => makeProjectCards(skill, index))}
       </div>
+      <Button />
     </div>
   );
 };

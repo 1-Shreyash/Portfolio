@@ -54,7 +54,7 @@ const web = [
 const makeSkillCard = (item, index) => {
   return (
     <Reveal key={index} index={index}>
-      <div className="w-48 bg-neutral-100 max-sm:w-40 flex flex-row m-4 max-sm:m-2 justify-between items-center px-4 py-3 border-black text-lg max-sm:text-base rounded-md">
+      <div className="w-48 bg-neutral-100 max-sm:w-40 flex flex-row m-4 max-sm:m-2 justify-between items-center px-4 py-3 border-black text-lg max-sm:text-base rounded-md hover:scale-110 ease-in-out duration-200 hover:shadow-lg">
         <div className="text-sm">{item.name}</div>
         <div className="scale-[150%] max-sm:scale-[120%]">{item.icon}</div>
       </div>
