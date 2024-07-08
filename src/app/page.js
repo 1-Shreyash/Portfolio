@@ -17,10 +17,10 @@ export default function Home() {
         id="home"
         className="bg-[#fafafa] flex flex-col items-center justify-center"
       >
-        <Bounce duration={500}>
+        <Bounce duration={300}>
           <h1 className="md:text-xl mt-80">Hola My name is,</h1>
         </Bounce>
-        <Zoom delay={300}>
+        <Zoom delay={200}>
           {/* <Fade bottom> */}
           <h1 className="text-outliner text-[35px] sm:text-[50px] md:text-[100px]">
             &lt; Shreyash S. Sahu /&gt;
@@ -55,9 +55,7 @@ export default function Home() {
         id="contact"
         className="min-h-screen bg-[#fafafa] flex flex-col items-center justify-center"
       >
-        <h2 className="text-3xl font-bold mb-4">
-          Have Questions, Let's Talk :
-        </h2>
+        <h2 className="text-3xl font-bold mb-4">Let's Talk :</h2>
         <ContactForm />
       </section>
       <Footer />

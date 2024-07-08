@@ -1,7 +1,7 @@
 "use client"; // Add this directive at the top of the file
 
 import React, { useState } from "react";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,7 +86,7 @@ const Navbar = () => {
         } overflow-hidden lg:hidden transition-all duration-500`}
       >
         <ul className="mt-4 space-y-2 text-white">
-          <Fade>
+          <Slide direction="down" duration={300}>
             <li>
               <a
                 onClick={() => handleScroll("home")}
@@ -95,8 +95,8 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-          </Fade>
-          <Fade>
+          </Slide>
+          <Slide direction="down" duration={300}>
             <li>
               <a
                 onClick={() => handleScroll("projects")}
@@ -105,8 +105,8 @@ const Navbar = () => {
                 Projects
               </a>
             </li>
-          </Fade>
-          <Fade>
+          </Slide>
+          <Slide direction="down" duration={300}>
             <li>
               <a
                 onClick={() => handleScroll("skills")}
@@ -115,8 +115,8 @@ const Navbar = () => {
                 Skills
               </a>
             </li>
-          </Fade>
-          <Fade>
+          </Slide>
+          <Slide direction="down" duration={300}>
             <li>
               <a
                 onClick={() => handleScroll("contact")}
@@ -125,7 +125,7 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-          </Fade>
+          </Slide>
         </ul>
       </div>
     </nav>
