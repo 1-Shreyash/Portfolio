@@ -7,7 +7,7 @@ import ProjectPage from "../components/Project/ProjectPage";
 import SkillsPage from "@/components/Skill/SkillsPage";
 import ContactForm from "@/components/Contact/ContactForm";
 import Footer from "@/components/Footer";
-import Fade, { Zoom } from "react-reveal";
+import Fade, { Zoom } from "react-awesome-reveal";
 
 export default function Home() {
   return (
