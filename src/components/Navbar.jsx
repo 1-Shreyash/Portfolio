@@ -1,6 +1,7 @@
 "use client"; // Add this directive at the top of the file
 
 import React, { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,38 +86,46 @@ const Navbar = () => {
         } overflow-hidden lg:hidden transition-all duration-500`}
       >
         <ul className="mt-4 space-y-2 text-white">
-          <li>
-            <a
-              onClick={() => handleScroll("home")}
-              className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleScroll("projects")}
-              className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleScroll("skills")}
-              className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleScroll("contact")}
-              className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
-            >
-              Contact
-            </a>
-          </li>
+          <Fade>
+            <li>
+              <a
+                onClick={() => handleScroll("home")}
+                className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
+              >
+                Home
+              </a>
+            </li>
+          </Fade>
+          <Fade>
+            <li>
+              <a
+                onClick={() => handleScroll("projects")}
+                className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
+              >
+                Projects
+              </a>
+            </li>
+          </Fade>
+          <Fade>
+            <li>
+              <a
+                onClick={() => handleScroll("skills")}
+                className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
+              >
+                Skills
+              </a>
+            </li>
+          </Fade>
+          <Fade>
+            <li>
+              <a
+                onClick={() => handleScroll("contact")}
+                className="block px-2 py-1 hover:bg-blue-600 rounded cursor-pointer"
+              >
+                Contact
+              </a>
+            </li>
+          </Fade>
         </ul>
       </div>
     </nav>
