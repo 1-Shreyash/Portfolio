@@ -1,8 +1,6 @@
 "use client"; // Add this directive at the top of the file
 
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-black p-4 fixed top-0 z-50 transition-all duration-500">
+    <nav className="w-full bg-black p-4 max-sm:py-1 max-sm:px-4 fixed top-0 z-50 transition-all duration-500">
       <div className="flex justify-between items-center">
         <a
           onClick={() => handleScroll("home")}
@@ -29,11 +27,22 @@ const Navbar = () => {
           Shreyash S. Sahu
         </a>
         <div className="lg:hidden" onClick={toggleMenu}>
-          {isOpen ? (
-            <IoClose size={30} className="text-white" />
-          ) : (
-            <FaBars size={30} className="text-white" />
-          )}
+          <svg
+            className={`ham hamRotate ham4 ${isOpen ? "active" : ""}`}
+            viewBox="0 0 100 100"
+            width="50" // Adjust width
+            height="50" // Adjust height
+          >
+            <path
+              className="line top"
+              d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+            />
+            <path className="line middle" d="m 70,50 h -40" />
+            <path
+              className="line bottom"
+              d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+            />
+          </svg>
         </div>
         <ul className="hidden lg:flex space-x-4 text-white">
           <li>
@@ -72,7 +81,7 @@ const Navbar = () => {
       </div>
       <div
         className={`${
-          isOpen ? "max-h-screen" : "max-h-0"
+          isOpen ? "max-h-screen pb-4" : "max-h-0"
         } overflow-hidden lg:hidden transition-all duration-500`}
       >
         <ul className="mt-4 space-y-2 text-white">
