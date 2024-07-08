@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-black p-4 fixed top-0 z-50">
+    <nav className="w-full bg-black p-4 fixed top-0 z-50 transition-all duration-500">
       <div className="flex justify-between items-center">
         <a
           onClick={() => handleScroll("home")}
@@ -70,8 +70,12 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {isOpen && (
-        <ul className="lg:hidden mt-4 space-y-2 text-white">
+      <div
+        className={`${
+          isOpen ? "max-h-screen" : "max-h-0"
+        } overflow-hidden lg:hidden transition-all duration-500`}
+      >
+        <ul className="mt-4 space-y-2 text-white">
           <li>
             <a
               onClick={() => handleScroll("home")}
@@ -105,7 +109,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-      )}
+      </div>
     </nav>
   );
 };

@@ -51,7 +51,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-w-[50%] mx-auto p-8 bg-white shadow-md rounded-lg"
+      className="min-w-[50%] mx-auto p-8 bg-white shadow-md rounded-lg max-sm:min-w-[80%]"
     >
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

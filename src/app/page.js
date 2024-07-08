@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <section
         id="home"
-        className="bg-gray-100 flex flex-col items-center justify-center"
+        className="bg-[#fafafa] flex flex-col items-center justify-center"
       >
         <Bounce duration={500}>
           <h1 className="md:text-xl mt-80">Hola My name is,</h1>
@@ -41,19 +41,19 @@ export default function Home() {
       </section>
       <section
         id="projects"
-        className="min-h-screen bg-gray-300 flex flex-col items-center justify-center"
+        className="min-h-screen bg-[#fafafa] flex flex-col items-center justify-center"
       >
         <ProjectPage />
       </section>
       <section
         id="skills"
-        className="min-h-screen bg-gray-200 flex items-center justify-center"
+        className="min-h-screen bg-[#fafafa] flex items-center justify-center"
       >
         <SkillsPage />
       </section>
       <section
         id="contact"
-        className="min-h-screen bg-gray-300 flex flex-col items-center justify-center"
+        className="min-h-screen bg-[#fafafa] flex flex-col items-center justify-center"
       >
         <h2 className="text-3xl font-bold mb-4">
           Have Questions, Let's Talk :
