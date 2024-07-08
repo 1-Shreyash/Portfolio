@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-black p-4 max-sm:py-1 max-sm:px-4 fixed top-0 z-50 transition-all duration-500">
+    <nav className="w-full bg-black p-4 max-sm:py-1 max-sm:px-1 max-sm:pl-4 fixed top-0 z-50 transition-all duration-500">
       <div className="flex justify-between items-center">
         <a
           onClick={() => handleScroll("home")}
