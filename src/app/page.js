@@ -17,7 +17,7 @@ export default function Home() {
         id="home"
         className="bg-[#fafafa] flex flex-col items-center justify-center"
       >
-        <Bounce duration={300}>
+        <Bounce duration={400}>
           <h1 className="md:text-xl mt-80">Hola My name is,</h1>
         </Bounce>
         <Zoom delay={200}>
