@@ -33,7 +33,7 @@ export default function Home() {
       >
         <Bounce duration={400}>
           <h1
-            className={`${blackOps.className} tracking-widest md:text-xl mt-80 stylish-regular font-bold`}
+            className={`${blackOps.className} tracking-widest md:text-xl mt-60 md:mt-80 stylish-regular font-bold`}
           >
             Hola, My name is
           </h1>
@@ -41,22 +41,20 @@ export default function Home() {
         <Zoom delay={200}>
           {/* <Fade bottom> */}
           <h1
-            className={`${mplus.className} text-outliner text-[100px] tracking-normal text-center`}
+            className={`${mplus.className} text-outliner text-[40px] md:text-[100px] tracking-normal text-center flex flex-row max-md:underline`}
           >
-            &lt; Shreyash S. Sahu/&gt;
+            <span className="hidden md:block">&lt;</span> Shreyash S. Sahu
+            <span className="hidden md:block">/&gt;</span>
           </h1>
           {/* </Fade> */}
         </Zoom>
-        <div className={`md:text-2xl font-thin m-8`}>
+        <div className={`md:text-2xl font-thin m-8 text-center`}>
           Full Stack Developer And Competetive Programmer
         </div>
         {/* <Zoom triggerOnce> */}
         <Button />
         {/* </Zoom> */}
-        <div
-          className="w-[60%] m-36 text-center md:text-3xl"
-          style={{ lineHeight: "50px" }}
-        >
+        <div className="w-[80%] md:w-[60%] m-12 mb-0 md:m-36 text-center md:text-3xl tracking-wider">
           A skilled software developer with extensive experience in building
           reliable and innovative digital solutions. Demonstrates
           professionalism and passion in transforming ideas into reality.
@@ -82,7 +80,7 @@ export default function Home() {
           <span className="w-fit flex flex-col justify-start items-start">
             <h1 className={`font-bold text-5xl mt-12`}>Drop a</h1>
             <h1
-              className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner`}
+              className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner1`}
             >
               Message..
             </h1>

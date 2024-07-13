@@ -106,16 +106,16 @@ const makeProjectCards = (item, index) => {
 
 const ProjectPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-20 ">
+    <div className="flex flex-col justify-center items-center pt-12 md:py-20 ">
       <span className="w-fit flex flex-col justify-start items-start">
         <h1 className={`font-bold text-5xl mt-12`}>My</h1>
         <h1
-          className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner`}
+          className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner1`}
         >
           Creations..
         </h1>
       </span>
-      <div className="h-fit grid sm:grid-cols-2 md:grid-cols-3">
+      <div className="h-fit grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 ">
         {projects.map((skill, index) => makeProjectCards(skill, index))}
       </div>
       <Button />

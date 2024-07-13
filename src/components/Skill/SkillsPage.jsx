@@ -70,9 +70,9 @@ const SkillsPage = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <span className="w-fit flex flex-col justify-start items-start">
-        <h1 className={`font-bold text-5xl mt-12`}>Technical</h1>
+        <h1 className={`font-bold text-5xl mt-12 max-md:mt-24`}>Technical</h1>
         <h1
-          className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner`}
+          className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner1`}
         >
           Skills..
         </h1>
