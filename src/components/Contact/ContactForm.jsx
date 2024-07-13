@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import axios from "axios";
@@ -24,6 +24,7 @@ const ContactForm = () => {
       [name]: value,
     }));
   };
+
   const btnRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -49,6 +50,16 @@ const ContactForm = () => {
     }
   };
 
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus("");
+      }, 10000); // 10 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -57,13 +68,7 @@ const ContactForm = () => {
       className="min-w-[50%] mx-auto p-8 bg-white shadow-md rounded-lg max-md:min-w-[80%]"
     >
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Name
-          </label>
+        <div className="input-container">
           <input
             type="text"
             name="name"
@@ -71,16 +76,14 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            className="input-field"
+            placeholder=" " // This keeps the label floating when input is empty
           />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Email
+          <label htmlFor="name" className="floating-label">
+            Name
           </label>
+        </div>
+        <div className="input-container">
           <input
             type="email"
             name="email"
@@ -88,16 +91,14 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            className="input-field"
+            placeholder=" "
           />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Message
+          <label htmlFor="email" className="floating-label">
+            Email
           </label>
+        </div>
+        <div className="input-container">
           <textarea
             name="message"
             id="message"
@@ -105,8 +106,12 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows="4"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            className="input-field"
+            placeholder=" "
           />
+          <label htmlFor="message" className="floating-label">
+            Message
+          </label>
         </div>
         <div className="flex justify-center items-center">
           <button
