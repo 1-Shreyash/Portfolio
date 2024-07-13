@@ -6,7 +6,7 @@ const Project = (props) => {
   return (
     <div
       key={props.name}
-      className="w-80 h-[430px] m-4 p-4 flex flex-col border shadow-lg bg-white rounded-xl hover:scale-110 ease-in-out duration-200 hover:shadow-lg"
+      className="w-80 h-[430px] m-4 p-4 flex flex-col border shadow-lg bg-white rounded-xl hover:scale-105 ease-in-out duration-200 hover:shadow-lg"
     >
       <div className="min-h-60 flex justify-center items-center">
         <img

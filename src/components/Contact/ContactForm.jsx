@@ -4,6 +4,9 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import axios from "axios";
+import { Black_Ops_One } from "@next/font/google";
+
+const blackOps = Black_Ops_One({ subsets: ["latin"], weight: "400" });
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

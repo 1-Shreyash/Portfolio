@@ -22,6 +22,10 @@ import { FaJava, FaBootstrap } from "react-icons/fa";
 import { CgCPlusPlus, CgDatabase } from "react-icons/cg";
 import Reveal from "../Reveal";
 
+import { Black_Ops_One } from "@next/font/google";
+
+const blackOps = Black_Ops_One({ subsets: ["latin"], weight: "400" });
+
 const languages = [
   { name: "Javascript", icon: <DiJavascript1 /> },
   { name: "Python", icon: <DiPython /> },
@@ -65,7 +69,14 @@ const makeSkillCard = (item, index) => {
 const SkillsPage = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-4xl">Skills</h1>
+      <span className="w-fit flex flex-col justify-start items-start">
+        <h1 className={`font-bold text-5xl mt-12`}>Technical</h1>
+        <h1
+          className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner`}
+        >
+          Skills..
+        </h1>
+      </span>
       <h1 className="text-2xl max-sm:text-lg max-sm:mt-4  self-start">
         Languages :{" "}
       </h1>

@@ -1,16 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 body{
   background-color: #fafafa;
+  /* line-height: 4; */
 }
 
 .btn{
   position: relative;
   display: inline-flex;
   padding: 10px 30px;
-  background-color: #efebeb;
+  background-color: transparent;
   color : #000;
   border: 1px solid #000000;
   border-radius: 999px;
@@ -48,16 +49,16 @@ body{
   height: 300px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 .text-outliner{
-  font-family: "Noto Sans", sans-serif;
+  /* font-family: "Noto Sans", sans-serif; */
   font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+  /* font-weight: 600; */
+  /* font-style: normal; */
+  /* font-variation-settings: "wdth" 100; */
   -webkit-text-fill-color:transparent;
   -webkit-text-stroke: 1px black;
 }
+
 
 .ham {
   cursor: pointer;
@@ -92,4 +93,18 @@ body{
 }
 .ham4.active .bottom {
   stroke-dashoffset: -68px;
+}
+
+.black {
+  stroke: black;
+  fill: none;
+}
+.glass{
+
+background: rgba(255, 255, 255, 0.7);
+/* border-radius: 16px; */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <div className="w-screen min-h-60 bg-black text-white flex flex-col sm:flex-row justify-around items-center py-8 mb:px-40 max-sm:py-4">
+    <div className="w-min-screen min-h-60 bg-black text-white flex flex-col sm:flex-row justify-around items-center py-8 mb:px-40 max-sm:py-4">
       <div className="m-4 mb:m-8 mb:mt-0">
         <h1 className="text-4xl sm:text-6xl my-4 sm:my-8">Wanna</h1>
         <h1 className="text-4xl sm:text-6xl my-4 sm:my-8">Collaborate..?</h1>

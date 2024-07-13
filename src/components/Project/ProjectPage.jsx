@@ -11,6 +11,9 @@ import TodoTracker from "../../images/TodoTracker.png";
 import DigitalClock from "../../images/DigitalClock.png";
 import Reveal from "../Reveal";
 import Button from "../ProjectBtn";
+import { Black_Ops_One } from "@next/font/google";
+
+const blackOps = Black_Ops_One({ subsets: ["latin"], weight: "400" });
 const projects = [
   {
     name: "Healthify",
@@ -103,8 +106,15 @@ const makeProjectCards = (item, index) => {
 
 const ProjectPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-20">
-      <h1 className="text-4xl m-12">Projects</h1>
+    <div className="flex flex-col justify-center items-center py-20 ">
+      <span className="w-fit flex flex-col justify-start items-start">
+        <h1 className={`font-bold text-5xl mt-12`}>My</h1>
+        <h1
+          className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner`}
+        >
+          Creations..
+        </h1>
+      </span>
       <div className="h-fit grid sm:grid-cols-2 md:grid-cols-3">
         {projects.map((skill, index) => makeProjectCards(skill, index))}
       </div>
