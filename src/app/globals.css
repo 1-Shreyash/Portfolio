@@ -11,9 +11,10 @@ body{
   position: relative;
   display: inline-flex;
   padding: 10px 30px;
+  font-weight: 700;
   background-color: transparent;
   color : #000;
-  border: 1px solid #000000;
+  border: 1px solid #cfcccc;
   border-radius: 999px;
   text-decoration: none;
   letter-spacing: 1px;

@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -60,8 +61,17 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Adjust breakpoint as needed
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial value
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -70,7 +80,7 @@ const Navbar = () => {
       className={`${
         blackOps.className
       } tracking-wider w-full p-4 max-sm:py-1 max-sm:px-1 max-sm:pl-4 fixed top-0 z-50 transition-all duration-0 ${
-        isScrolled ? "glass" : "bg-transparent"
+        isMobile || isScrolled ? "glass" : "bg-transparent"
       } text-[#141414]`}
     >
       <div className="flex justify-between items-center">
