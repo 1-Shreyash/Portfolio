@@ -112,7 +112,7 @@ const ProjectPage = () => {
         <h1
           className={`${blackOps.className} text-5xl mb-12 mt-2 text-outliner1`}
         >
-          Creations..
+          Projects..
         </h1>
       </span>
       <div className="h-fit grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 ">

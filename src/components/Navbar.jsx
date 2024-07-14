@@ -36,7 +36,7 @@ const Navbar = () => {
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
       rootMargin: "0px",
-      threshold: 0, // Adjust this value as needed
+      threshold: 0.01, // Adjust this value as needed
     });
 
     const sections = document.querySelectorAll("section");
@@ -124,7 +124,9 @@ const Navbar = () => {
             <a
               onClick={() => handleScroll("home")}
               className={`cursor-pointer  ${
-                activeSection === "home" ? "text-black font-bold" : ""
+                activeSection === "home"
+                  ? "text-black font-bold shadow-teal-200"
+                  : ""
               }`}
             >
               Home
@@ -132,9 +134,23 @@ const Navbar = () => {
           </li>
           <li className="hover:scale-110 transition-transform">
             <a
+              onClick={() => handleScroll("socials")}
+              className={`cursor-pointer  ${
+                activeSection === "socials"
+                  ? "text-black font-bold shadow-teal-200"
+                  : ""
+              }`}
+            >
+              Profiles
+            </a>
+          </li>
+          <li className="hover:scale-110 transition-transform">
+            <a
               onClick={() => handleScroll("projects")}
               className={`cursor-pointer  ${
-                activeSection === "projects" ? "text-black font-bold" : ""
+                activeSection === "projects"
+                  ? "text-black font-bold shadow-teal-200"
+                  : ""
               }`}
             >
               Projects
@@ -144,7 +160,9 @@ const Navbar = () => {
             <a
               onClick={() => handleScroll("skills")}
               className={`cursor-pointer  ${
-                activeSection === "skills" ? "text-black font-bold" : ""
+                activeSection === "skills"
+                  ? "text-black font-bold shadow-teal-200"
+                  : ""
               }`}
             >
               Skills
@@ -179,6 +197,20 @@ const Navbar = () => {
                 }`}
               >
                 Home
+              </a>
+            </li>
+          </Slide>
+          <Slide direction="down" duration={300}>
+            <li>
+              <a
+                onClick={() => handleScroll("socials")}
+                className={`block px-2 py-1 rounded cursor-pointer ${
+                  activeSection === "socials"
+                    ? "text-black border border-1 "
+                    : "font-black"
+                }`}
+              >
+                Profiles
               </a>
             </li>
           </Slide>

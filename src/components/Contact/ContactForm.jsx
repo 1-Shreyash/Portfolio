@@ -65,7 +65,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-w-[50%] mx-auto p-8 bg-white shadow-md rounded-lg max-md:min-w-[80%]"
+      className="min-w-[50%] mx-auto p-8 bg-white shadow-md rounded-lg max-md:min-w-[90%] max-md:p-4"
     >
       <form onSubmit={handleSubmit}>
         <div className="input-container">
