@@ -49,14 +49,14 @@ const Social = () => {
       <div className="w-screen flex flex-col md:flex-row justify-center items-center mt-12">
         <div className="md:min-w-[51%] flex flex-row justify-around">
           <Reveal>
-            <div className="w-28 h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
               <a href="https://leetcode.com/u/ShreyashShahu/" target="_blank">
                 <img src={Leetcode.src} alt="" className="h-16 w-auto" />
               </a>
             </div>
           </Reveal>
           <Reveal>
-            <div className="w-28 h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
               <a
                 href="https://www.codechef.com/users/shreyash_sahu1"
                 target="_blank"
@@ -66,7 +66,7 @@ const Social = () => {
             </div>
           </Reveal>
           <Reveal>
-            <div className="w-28 h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
               <a
                 href="https://github.com/1-Shreyash?tab=repositories"
                 target="_blank"
@@ -78,7 +78,7 @@ const Social = () => {
         </div>
         <div className="max-w-[90%] md:min-w-[34%] flex flex-row justify-around">
           <Reveal>
-            <div className="w-28 h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out border border-1">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out border border-1">
               <a
                 href="https://codeforces.com/profile/1-Shreyash"
                 target="_blank"
@@ -88,7 +88,7 @@ const Social = () => {
             </div>
           </Reveal>
           <Reveal>
-            <div className="w-28 h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-lg flex justify-center items-center m-2 md:grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out">
               <a
                 href="https://www.geeksforgeeks.org/user/sahu4azk/"
                 target="_blank"
