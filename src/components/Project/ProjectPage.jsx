@@ -106,7 +106,7 @@ const makeProjectCards = (item, index) => {
 
 const ProjectPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center pt-12 md:py-20 ">
+    <div className="flex flex-col justify-center items-center pt-12 md:py-20">
       <span className="w-fit flex flex-col justify-start items-start">
         <h1 className={`font-bold text-5xl mt-12`}>My</h1>
         <h1
