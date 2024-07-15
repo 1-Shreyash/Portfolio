@@ -2,7 +2,7 @@ import "./globals.css";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Shreyash Shahu",
+  title: "Shreyash Sahu",
   description: "Software Engineer",
 };
 
