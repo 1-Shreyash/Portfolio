@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export const metadata = {
   title: "Shreyash Sahu",
-  description: "Software Engineer",
+  description: "Software Engineer | Competitive Programmer",
 };
 
 export default function RootLayout({ children }) {
