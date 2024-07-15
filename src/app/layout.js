@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
+        <title>Shreyash Sahu</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
