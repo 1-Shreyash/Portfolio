@@ -201,7 +201,7 @@ export default function Home() {
           professionalism and passion in transforming ideas into reality.
         </div>
       </section>
-      <section id="socials" className="flex items-center justify-center mt-10">
+      <section id="socials" className="flex items-center justify-center pt-10">
         <Social />
       </section>
       <section
