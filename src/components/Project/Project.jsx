@@ -4,17 +4,21 @@ import { LuExternalLink } from "react-icons/lu";
 
 const Project = (props) => {
   return (
-    <div
-      key={props.name}
-      className="w-80 h-[430px] m-4 p-4 flex flex-col border shadow-lg bg-white rounded-xl hover:scale-105 ease-in-out duration-200 hover:shadow-lg"
-    >
-      <div className="min-h-60 flex justify-center items-center">
+    <div className="w-80 h-[430px] m-4 p-4 flex flex-col border shadow-lg bg-white rounded-xl hover:scale-105 ease-in-out duration-200 hover:shadow-lg">
+      <a
+        href={props.deploy ? props.deploy : props.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="min-h-60 flex justify-center items-center"
+        onMouseEnter={props.onMouseEnter}
+        onMouseLeave={props.onMouseLeave}
+      >
         <img
           src={props.img.src}
           alt={props.name}
           className="w-full h-auto rounded-md"
         />
-      </div>
+      </a>
       <div className="flex flex-row justify-between items-center">
         <h1 className="text-2xl m-2">{props.name}</h1>
         <span className="m-2">

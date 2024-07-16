@@ -14,7 +14,10 @@ import {
   Roboto,
   Black_Ops_One,
 } from "@next/font/google";
+import { motion } from "framer-motion";
 import Social from "@/components/Social";
+import { useState, useEffect } from "react";
+import SelfImage from "../components/SelfImage";
 
 const varelaRound = Varela_Round({ subsets: ["latin"], weight: "400" });
 const roboto = Roboto({
@@ -25,33 +28,177 @@ const mplus = M_PLUS_Rounded_1c({ subsets: ["latin"], weight: "700" });
 const blackOps = Black_Ops_One({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  // Preload the image
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = "../images/self.jpeg"; // Make sure this path is correct
+  }, []);
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 30,
+        duration: 0,
+      },
+      // rotate: -360,
+    },
+    text: {
+      scale: 40,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      backgroundColor: "black",
+      mixBlendMode: "multiply",
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 30,
+        duration: 0,
+      },
+      // rotate: 360,
+    },
+    text2: {
+      scale: 20,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      backgroundColor: "black",
+      mixBlendMode: "multiply",
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 300,
+        duration: 0,
+      },
+      // rotate: 60,
+    },
+    textNav: {
+      scale: 5,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      backgroundColor: "white",
+      mixBlendMode: "difference",
+      transition: {
+        type: "smooth",
+        duration: 0,
+      },
+      // rotate: 360,
+    },
+    textFooter: {
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      backgroundColor: "white",
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 30,
+        duration: 0,
+      },
+    },
+
+    textFooter2: {
+      scale: 5,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      backgroundColor: "white",
+      mixBlendMode: "difference",
+      transition: {
+        type: "smooth",
+        duration: 0,
+      },
+      // rotate: 360,
+    },
+
+    textProfile: {
+      scale: 5,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
+      backgroundColor: "green",
+      // mixBlendMode: "multiply",
+      transition: {
+        type: "smooth",
+        duration: 0,
+      },
+      // rotate: 360,
+    },
+  };
+
+  const textEnter = () => setCursorVariant("text");
+  const textEnter2 = () => setCursorVariant("text2");
+  const textEnterNav = () => setCursorVariant("textNav");
+  const textEnterFooter = () => setCursorVariant("textFooter");
+  const textEnterFooter2 = () => setCursorVariant("textFooter2");
+  const textLeave = () => setCursorVariant("default");
+  const textEnterProfile = () => setCursorVariant("textProfile");
+
   return (
-    <div className={`${roboto.className}`}>
-      <Navbar />
-      <section id="home" className="flex flex-col items-center justify-center">
+    <div className={`${roboto.className} cursor-none`}>
+      <Navbar onMouseEnter={textEnterNav} onMouseLeave={textLeave} />
+      <section
+        id="home"
+        className="md:min-w-screen flex flex-col items-center justify-center"
+      >
+        <div>
+          <img
+            src="/self.jpeg"
+            className="w-40 h-40 mt-40 mb-12 shadow-sm rounded-full visibile md:hidden"
+            alt=""
+          />
+        </div>
         <Bounce duration={400}>
-          <h1
-            className={`${blackOps.className} tracking-widest md:text-xl mt-60 md:mt-80 stylish-regular font-bold`}
+          <div
+            className="md:w-[90vw] flex justify-center items-center mt-50 pt-30 md:pt-40 md:mt-40"
+            onMouseEnter={textEnter2}
+            onMouseLeave={textLeave}
           >
-            Hola, My name is
-          </h1>
+            <h1
+              className={`${blackOps.className} tracking-widest md:text-xl  stylish-regular font-bold z-0`}
+            >
+              Hola, My name is
+            </h1>
+          </div>
         </Bounce>
         <Zoom delay={200}>
-          {/* <Fade bottom> */}
           <h1
-            className={`${mplus.className} text-outliner text-[40px] md:text-[100px] tracking-normal text-center max-md:underline`}
+            className={`${mplus.className} md:w-[90vw] text-outliner text-[40px] md:text-[100px] tracking-normal text-center max-md:underline`}
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
           >
-            <span className="hidden md:inline-block">&lt;</span>Shreyash S. Sahu
+            <span className="hidden md:inline-block">&lt;</span>
+            Shreyash S. Sahu
             <span className="hidden md:inline-block">/&gt;</span>
           </h1>
-          {/* </Fade> */}
         </Zoom>
-        <div className={`md:text-2xl font-thin m-8 text-center`}>
-          Full Stack Developer And Competetive Programmer
+        <div
+          className={`w-[90vw] md:text-2xl mb-4 font-thin p-4 text-center`}
+          onMouseEnter={textEnter2}
+          onMouseLeave={textLeave}
+        >
+          Full Stack Developer And Competitive Programmer
         </div>
-        {/* <Zoom triggerOnce> */}
         <Button />
-        {/* </Zoom> */}
         <div className="w-[80%] md:w-[60%] m-12 mb-0 md:mt-36 text-center md:text-3xl tracking-wider">
           A skilled software developer with extensive experience in building
           reliable and innovative digital solutions. Demonstrates
@@ -65,7 +212,7 @@ export default function Home() {
         id="projects"
         className="min-h-screen flex items-center justify-center mt-10"
       >
-        <ProjectPage />
+        <ProjectPage onMouseEnter={textEnterProfile} onMouseLeave={textLeave} />
       </section>
       <section
         id="skills"
@@ -89,7 +236,27 @@ export default function Home() {
         </span>
         <ContactForm />
       </section>
-      <Footer />
+      <Footer
+        onMouseEnter={textEnterFooter}
+        onMouseEnter2={textEnterFooter2}
+        onMouseLeave={textLeave}
+        onMouseLeave2={textEnterFooter}
+      />
+      <motion.div
+        className="cursor invisible md:visible"
+        variants={variants}
+        animate={cursorVariant}
+        transition={{ type: "tween", ease: "backOut" }}
+      >
+        {(cursorVariant === "text" || cursorVariant === "text2") && (
+          <SelfImage />
+        )}
+        {cursorVariant === "textProfile" && (
+          <div className="w-full h-full text-white text-[3px] flex justify-center items-center">
+            View
+          </div>
+        )}
+      </motion.div>
     </div>
   );
 }

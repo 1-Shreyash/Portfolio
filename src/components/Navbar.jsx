@@ -6,7 +6,7 @@ import { Black_Ops_One } from "@next/font/google";
 
 const blackOps = Black_Ops_One({ subsets: ["latin"], weight: "400" });
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -86,9 +86,11 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         <a
           onClick={() => handleScroll("home")}
-          className={`text-lg font-bold cursor-pointer hover:scale-105 transition-transform ${
-            activeSection === "home" ? "text-[#5c5c5c]" : ""
+          className={`text-lg font-bold hover:scale-105 transition-transform ${
+            activeSection === "home" ? "text-[#000]" : ""
           }`}
+          onMouseEnter={props.onMouseEnter}
+          onMouseLeave={props.onMouseLeave}
         >
           Shreyash S. Sahu
         </a>
@@ -120,10 +122,14 @@ const Navbar = () => {
           </svg>
         </div>
         <ul className="hidden lg:flex space-x-4 text-[#6b6b6b]">
-          <li className="hover:scale-110 transition-transform">
+          <li
+            className="hover:scale-110 transition-transform"
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+          >
             <a
               onClick={() => handleScroll("home")}
-              className={`cursor-pointer  ${
+              className={`${
                 activeSection === "home"
                   ? "text-black font-bold shadow-teal-200"
                   : ""
@@ -132,10 +138,14 @@ const Navbar = () => {
               Home
             </a>
           </li>
-          <li className="hover:scale-110 transition-transform">
+          <li
+            className="hover:scale-110 transition-transform"
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+          >
             <a
               onClick={() => handleScroll("socials")}
-              className={`cursor-pointer  ${
+              className={`  ${
                 activeSection === "socials"
                   ? "text-black font-bold shadow-teal-200"
                   : ""
@@ -144,10 +154,14 @@ const Navbar = () => {
               Profiles
             </a>
           </li>
-          <li className="hover:scale-110 transition-transform">
+          <li
+            className="hover:scale-110 transition-transform"
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+          >
             <a
               onClick={() => handleScroll("projects")}
-              className={`cursor-pointer  ${
+              className={`  ${
                 activeSection === "projects"
                   ? "text-black font-bold shadow-teal-200"
                   : ""
@@ -156,10 +170,14 @@ const Navbar = () => {
               Projects
             </a>
           </li>
-          <li className="hover:scale-110 transition-transform">
+          <li
+            className="hover:scale-110 transition-transform"
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+          >
             <a
               onClick={() => handleScroll("skills")}
-              className={`cursor-pointer  ${
+              className={`  ${
                 activeSection === "skills"
                   ? "text-black font-bold shadow-teal-200"
                   : ""
@@ -168,10 +186,14 @@ const Navbar = () => {
               Skills
             </a>
           </li>
-          <li className="hover:scale-110 transition-transform">
+          <li
+            className="hover:scale-110 transition-transform"
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+          >
             <a
               onClick={() => handleScroll("contact")}
-              className={`cursor-pointer  ${
+              className={`  ${
                 activeSection === "contact" ? "text-black font-bold" : ""
               }`}
             >
@@ -190,7 +212,7 @@ const Navbar = () => {
             <li>
               <a
                 onClick={() => handleScroll("home")}
-                className={`block px-2 py-1 rounded cursor-pointer ${
+                className={`block px-2 py-1 rounded  ${
                   activeSection === "home"
                     ? "text-black border border-1 "
                     : "font-black"
@@ -204,7 +226,7 @@ const Navbar = () => {
             <li>
               <a
                 onClick={() => handleScroll("socials")}
-                className={`block px-2 py-1 rounded cursor-pointer ${
+                className={`block px-2 py-1 rounded  ${
                   activeSection === "socials"
                     ? "text-black border border-1 "
                     : "font-black"
@@ -218,7 +240,7 @@ const Navbar = () => {
             <li>
               <a
                 onClick={() => handleScroll("projects")}
-                className={`block px-2 py-1 rounded cursor-pointer ${
+                className={`block px-2 py-1 rounded  ${
                   activeSection === "projects"
                     ? "text-black border border-1 "
                     : ""
@@ -232,7 +254,7 @@ const Navbar = () => {
             <li>
               <a
                 onClick={() => handleScroll("skills")}
-                className={`block px-2 py-1 rounded cursor-pointer ${
+                className={`block px-2 py-1 rounded  ${
                   activeSection === "skills"
                     ? "text-black border border-1 "
                     : ""
@@ -246,7 +268,7 @@ const Navbar = () => {
             <li>
               <a
                 onClick={() => handleScroll("contact")}
-                className={`block px-2 py-1 rounded cursor-pointer ${
+                className={`block px-2 py-1 rounded  ${
                   activeSection === "contact"
                     ? "text-black border border-1 "
                     : ""

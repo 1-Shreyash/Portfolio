@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
 body{
   background-color: #fafafa;
   /* line-height: 4; */
 }
-
+*{
+  cursor:none;
+}
+button{
+  cursor: none;
+}
+a{
+  cursor: none;
+}
 .btn{
   position: relative;
   display: inline-flex;
@@ -19,16 +28,18 @@ body{
   text-decoration: none;
   letter-spacing: 1px;
   overflow: hidden;
+  z-index: 101;
 }
 
 .btn:hover span{
   transform: scale(1.1);
   color: #fff;
+  z-index: 101;
 }
 
 .btn span{
   position: relative;
-  z-index: 1;
+  z-index: 102;
   transition: 0.3s ease-in-out;
 }
 
@@ -43,16 +54,19 @@ body{
   border-radius: 50%;
   background-color: #000000;
   transition: width 0.5s, height 0.5s;
+  z-index: 101;
 }
 
 .btn:hover::before{
   width: 300px;
   height: 300px;
+  z-index: 101;
 }
 
 .text-outliner1{
   
     /* font-family: "Noto Sans", sans-serif; */
+    color: black;
     font-optical-sizing: auto;
     /* font-weight: 600; */
     /* font-style: normal; */
@@ -64,6 +78,7 @@ body{
   .text-outliner {
     /* font-family: "Noto Sans", sans-serif; */
     font-optical-sizing: auto;
+    color: black;
     /* font-weight: 600; */
     /* font-style: normal; */
     /* font-variation-settings: "wdth" 100; */
@@ -159,4 +174,19 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 .input-field:focus {
   border-color: #000;
+}
+
+/* Mouse Follower */
+.cursor {
+  background-color: #111;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100;
+  transition: background-color 0.1s ease, transform 0.1s ease;
 }

@@ -89,7 +89,7 @@ const projects = [
   },
 ];
 
-const makeProjectCards = (item, index) => {
+const makeProjectCards = (item, index, onMouseEnter, onMouseLeave) => {
   return (
     <Reveal key={index} index={index}>
       <Project
@@ -99,12 +99,14 @@ const makeProjectCards = (item, index) => {
         desc={item.desc}
         github={item.git}
         deploy={item.deploy}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       />
     </Reveal>
   );
 };
 
-const ProjectPage = () => {
+const ProjectPage = (props) => {
   return (
     <div className="flex flex-col justify-center items-center pt-12 md:py-20">
       <span className="w-fit flex flex-col justify-start items-start">
@@ -116,7 +118,9 @@ const ProjectPage = () => {
         </h1>
       </span>
       <div className="h-fit grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 ">
-        {projects.map((skill, index) => makeProjectCards(skill, index))}
+        {projects.map((skill, index) =>
+          makeProjectCards(skill, index, props.onMouseEnter, props.onMouseLeave)
+        )}
       </div>
       <Button />
     </div>

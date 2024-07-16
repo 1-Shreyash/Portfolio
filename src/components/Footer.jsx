@@ -1,15 +1,21 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <div className="w-min-screen min-h-60 bg-black text-white flex flex-col sm:flex-row justify-around items-center py-8 mb:px-40 max-sm:py-4">
+    <div
+      className="w-min-screen min-h-60 bg-black text-white flex flex-col sm:flex-row justify-around items-center py-8 mb:px-40 max-sm:py-4"
+      onMouseEnter={props.onMouseEnter}
+      onMouseLeave={props.onMouseLeave}
+    >
       <div className="m-4 mb:m-8 mb:mt-0">
         <h1 className="text-4xl sm:text-6xl my-4 sm:my-8">Wanna</h1>
         <h1 className="text-4xl sm:text-6xl my-4 sm:my-8">Collaborate..?</h1>
         <a
           href="mailto:sahushreyash48@gmail.com"
           className="text-lg sm:text-xl"
+          onMouseEnter={props.onMouseEnter2}
+          onMouseLeave={props.onMouseLeave2}
         >
           Mail me at : sahushreyash48@gmail.com
         </a>
@@ -21,6 +27,8 @@ const Footer = () => {
             href="https://github.com/1-Shreyash"
             target="_blank"
             className="scale-[150%] sm:scale-[200%] mr-2 sm:mr-4"
+            onMouseEnter={props.onMouseEnter2}
+            onMouseLeave={props.onMouseLeave2}
           >
             <FaGithub />
           </a>
@@ -28,6 +36,8 @@ const Footer = () => {
             href="https://www.linkedin.com/in/sahushreyash48/"
             target="_blank"
             className="scale-[150%] sm:scale-[200%] m-2 sm:m-4"
+            onMouseEnter={props.onMouseEnter2}
+            onMouseLeave={props.onMouseLeave2}
           >
             <FaLinkedin />
           </a>
@@ -35,6 +45,8 @@ const Footer = () => {
             href="https://www.instagram.com/shreyashss777/"
             target="_blank"
             className="scale-[150%] sm:scale-[200%] m-2 sm:m-4"
+            onMouseEnter={props.onMouseEnter2}
+            onMouseLeave={props.onMouseLeave2}
           >
             <FaInstagram />
           </a>
@@ -42,6 +54,8 @@ const Footer = () => {
             href="https://x.com/Shreyashss777"
             target="_blank"
             className="scale-[150%] sm:scale-[200%] m-2 sm:m-4"
+            onMouseEnter={props.onMouseEnter2}
+            onMouseLeave={props.onMouseLeave2}
           >
             <FaXTwitter />
           </a>
