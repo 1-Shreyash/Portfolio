@@ -36,10 +36,6 @@ export default function Home() {
   const [cursorVariant, setCursorVariant] = useState("default");
 
   // Preload the image
-  useEffect(() => {
-    const img = new window.Image();
-    img.src = "../images/self.jpeg"; // Make sure this path is correct
-  }, []);
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -67,7 +63,7 @@ export default function Home() {
       // rotate: -360,
     },
     text: {
-      scale: 40,
+      scale: 30,
       x: mousePosition.x - 5,
       y: mousePosition.y - 5,
       backgroundColor: "black",
@@ -81,7 +77,7 @@ export default function Home() {
       // rotate: 360,
     },
     text2: {
-      scale: 20,
+      scale: 15,
       x: mousePosition.x - 5,
       y: mousePosition.y - 5,
       backgroundColor: "black",
