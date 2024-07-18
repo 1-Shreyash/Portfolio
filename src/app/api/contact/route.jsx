@@ -20,9 +20,9 @@ export async function POST(req) {
     const mailOptions = {
       from: "mov123s123@gmail.com",
       to: "sahushreyash48@gmail.com",
-      subject: "New Contact Form Submission",
+      subject: "New Contact Form..",
       html: `
-        <h1>Checkout the new contact form submission:</h1>
+        <h1>New Contact Form:</h1>
         <strong>Name:</strong> ${name}</ p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong> ${message}</p>
